@@ -14,7 +14,7 @@ do
     echo "$(echo -e $batch_beginning | cat - ${basename}_OPA_GeneList.batch)" > ${basename}_OPA_IGV.batch
     echo "exit" >> ${basename}_OPA_IGV.batch
 # run IGV batch script
-    sh /home/fletchec/bin/IGV_Linux_2.16.1/igv_batch.sh -b /home/fletchec/Projects/opa_igv_batch_snapshots/${basename}_OPA_IGV.batch
+    sh igv_batch.sh -b ${basename}_OPA_IGV.batch
 # remove temporary file that has been appended to in {basename}_OPA_IGV.batch
     rm ${basename}_OPA_GeneList.batch
 done
